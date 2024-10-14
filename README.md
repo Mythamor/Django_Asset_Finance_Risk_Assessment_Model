@@ -1,7 +1,3 @@
-Here's a detailed README template for your **Django Asset Finance Risk Assessment Model** project that you can use on GitHub:
-
----
-
 # Django Asset Finance Risk Assessment Model
 
 ## Overview
@@ -132,7 +128,3 @@ Contributions are welcome! Please follow these steps:
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
----
-
-Feel free to modify any sections to better fit your project or personal preferences!
