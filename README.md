@@ -1,14 +1,14 @@
 # Django Asset Finance Risk Assessment Model
 
-https://github.com/user-attachments/assets/625ea90c-c2b6-4e9f-9690-fd16ff3c7361
+
+
+
+https://github.com/user-attachments/assets/7e352b17-afaf-4bb0-98c8-eeca5a871877
+
 
 ## Overview
 
 The **Django Asset Finance Risk Assessment Model** is a machine learning application designed to assess the credit risk of individuals applying for asset financing. This model provides financial institutions with insights into the likelihood of loan default and estimates the amount of credit that can be extended to applicants.
-
-
-
-
 
 ### Key Features
 
