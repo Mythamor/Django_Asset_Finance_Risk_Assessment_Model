@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content  %}
+
+
+    <h1>Loan Eligibility Result</h1>
+    <p>Employment Status: {{ loan_application.employment_status }}</p>
+    <p>Loan Default Prediction: {{ loan_application.loan_default }}</p>
+
+{% endblock content %}

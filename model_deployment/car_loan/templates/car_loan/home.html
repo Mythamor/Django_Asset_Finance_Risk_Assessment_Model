@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content  %}
+<div class="banner bg-cover rounded bg-center h-screen p-8 backdrop-opacity-5 z-10" 
+    style="background-image: url('{% static 'car_loan/car.jpg' %}')">
+    <div
+        class="absolute bottom-0 left-0 right-0 top-10 h-full w-full overflow-hidden bg-fixed"
+        style="background-color: rgba(0, 0, 0, 0.6)">
+        <div>
+            <h2 class="m-6 text-4xl font-semibold text-white text-center"> Welcome to RidePal {{ username }} </h2>
+            <h6 class="text-l text-white text-center m-6"> Complete the risk assessment for an instant credit limit </h6>
+        </div>
+        <!-- component -->  
+        <div class='w-full md:w-1/2 md:max-w-full mx-auto flex-col justify-center items-center  m-8 z-20'>
+            
+        
+            <form method="POST" class="p-4">
+                {% csrf_token %}
+                <div class="bg-white rounded-md shadow-lg">
+                    {% for question in questions %}
+                    <div class="mb-6">
+                        <!-- Question Header -->
+                        <p class="bg-teal-700 px-4 py-3 text-white font-bold rounded-t-md">
+                            {{ question.question }}
+                        </p>
+            
+                        <!-- Options Container -->
+                        <div class="flex flex-col gap-3 p-4">
+                            {% if question.options.all %}
+                                <!-- If options exist, render them as radio buttons -->
+                                {% for option in question.options.all %}
+                                <div class="flex items-center gap-2">
+                                    <input 
+                                        type="radio" 
+                                        id="option_{{ option.id }}" 
+                                        name="question_{{ question.id }}" 
+                                        value="{{ option.id }}"
+                                        class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 
+                                            focus:ring-blue-500 dark:focus:ring-blue-600 
+                                            dark:ring-offset-gray-800 dark:bg-gray-600 dark:border-gray-500">
+                                    <label 
+                                        for="option_{{ option.id }}" 
+                                        class="text-sm font-medium text-gray-900 dark:text-gray-800">
+                                        {{ option.option }}
+                                    </label>
+                                </div>
+                                {% endfor %}
+                            {% else %}
+                                <!-- If no options are provided, show an input field -->
+                                <div class="flex items-center gap-2">
+                            
+                                    <input 
+                                        type="number"
+                                        min="0"
+                                        id="input_{{ question.id }}" 
+                                        name="open_question_{{ question.id }}" 
+                                        placeholder="Enter a valid response here"
+                                        class="w-full md:w-full p-3 mt-3 border border-gray-300 rounded-md 
+                                            focus:outline-none focus:ring-2 focus:ring-blue-500 
+                                            focus:border-transparent">
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+            
+                    <!-- Navigation Button -->
+                    <div class="w-full flex justify-end px-4 pb-4">
+                        <button type="submit" 
+                                class="bg-emerald-500 w-full md:w-auto px-6 py-2 rounded-md text-white 
+                                    font-bold hover:bg-emerald-600 transition duration-300"
+                                value="{% if question.id  == 15 %}The End!!{% else %}Next Question ➤{% endif %}">
+                                Next Question ➤
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>      
+
+{% endblock content %}
