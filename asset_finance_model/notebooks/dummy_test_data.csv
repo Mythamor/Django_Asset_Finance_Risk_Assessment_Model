@@ -1,0 +1,11 @@
+Perform_cns_score,Manufacturer_id,Voterid_flag,No_of_inquiries,Asset_cost,Pri_active_accts,Aadhar_flag,New_accts_in_last_six_months,Employment_type,Ltv,Pri_no_of_accts,Age,Credit_history_length_months,State_id,Disbursed_amount,Average_loan_tenure,Perform_cns_score_description
+402,11,1,12,698143,2,1,3,Self employed,0.85,13,28,236,35,1064577,74,D
+735,24,1,11,1550942,4,0,4,Salaried,0.35,9,44,46,22,648094,63,NOT-SCORED
+570,36,1,8,115725,18,1,2,Others,0.42,15,31,33,27,922421,15,E
+406,40,1,0,1228557,6,0,0,Self employed,0.33,13,37,140,35,640270,34,NO-HISTORY
+371,24,1,10,134654,8,1,3,Self employed,0.5,1,28,206,1,1192752,26,A
+320,3,0,10,1003277,6,1,1,Self employed,0.53,7,55,273,35,942710,54,B
+421,22,0,14,641723,17,1,3,Self employed,0.46,9,55,38,14,1291702,40,F
+766,2,1,9,369030,3,0,1,Self employed,0.8,24,53,53,3,243969,47,E
+514,24,1,11,1427523,13,1,1,Self employed,0.51,1,25,67,1,147409,24,G
+630,44,1,11,605839,17,0,3,Others,0.47,12,62,221,5,278618,43,A
